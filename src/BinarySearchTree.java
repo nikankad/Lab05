@@ -6,7 +6,7 @@ public abstract class BinarySearchTree{
         int data;
         Node left;
         Node right;
-       int size;
+        int size;
 
         // Node constructor initializes data and left/right pointers
         Node(int data) {
@@ -19,7 +19,6 @@ public abstract class BinarySearchTree{
     public abstract boolean add(int data);
 
     public int getSize() {return root.size;}
-
 
 
 
