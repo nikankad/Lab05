@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface ITreeIterator {
+public interface ITreeIterator {
+    public int[] SequenceArray(BinarySearchTree bst);
 }
