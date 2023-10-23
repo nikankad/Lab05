@@ -21,6 +21,27 @@ public class myBinarySearchTree extends BinarySearchTree {
         root = addRecursiveHelper(root, item);
         return addReturn;
     }
-
+    /**
+     * Helper method to add an integer to the binary search tree.
+     *
+     * @param localRoot The root of the current subtree.
+     * @param item      The integer to be added.
+     * @return The (possibly new) local root of the subtree that now contains the inserted item.
+     */
+    private Node addRecursiveHelper(Node localRoot, int item) {
+        if (localRoot == null) {
+            addReturn = true;
+            return new Node(item);
+        } else if (item == localRoot.data) {
+            addReturn = false;
+            return localRoot;
+        } else if (item < localRoot.data) {
+            localRoot.left = addRecursiveHelper(localRoot.left, item);
+            return localRoot;
+        } else {
+            localRoot.right = addRecursiveHelper(localRoot.right, item);
+            return localRoot;
+        }
+    }
 
 }
