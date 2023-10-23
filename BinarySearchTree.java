@@ -1,11 +1,11 @@
 // author: Nikan Kadkhodazadeh
 abstract class BinarySearchTree{
+    int size;
 
     protected Node root;
 
     static class Node {
         int data;
-        int size;
         Node left;
         Node right;
 
@@ -19,5 +19,5 @@ abstract class BinarySearchTree{
 
     public abstract Node add(int data);
 
-    public int getSize() {return root.size;}
+    public int getSize() {return size;}
 }
