@@ -1,9 +1,9 @@
 //ali
 class ConcreteBinarySearchTree extends BinarySearchTree {
     @Override
-    public boolean add(int data) {
+    public Node add(int data) {
         root = insert(root, data);
-        return true;
+        return root;
     }
 
     private Node insert(Node node, int data) {
